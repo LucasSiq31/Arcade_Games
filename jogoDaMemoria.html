@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Memória - Arcade Games</title>
+
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jogoDaMemoria.css">
+</head>
+
+<body onload="memoria()">
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="row">
+
+                <!-- Logo Site -->
+                <div class="col-10">
+                    <a class="logotipo" href="index.html">
+                        <img class="logotipo" src="imagens/logo.png" alt="">
+                    </a>
+                </div>
+
+
+                <div class="col-1 jogos">
+                    <!-- Botão Home -->
+                    <a href="index.html" class="icone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-fill icone" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Botão Login -->
+                <div class="col-1 jogos">
+                    <a href="personagens.html" class="icone">
+                        <a href="login.html" class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle icone" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1>Bem Vindo!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>Seja bem vindo ao Jogo da Memória! Quantos jogadores irão Jogar?</p>
+                        <div class="btnModal">
+                            <button type="button" class="btn Player1" data-bs-dismiss="modal" onclick="players(1)">1 Player</button>
+                            <button type="button" class="btn Player2" data-bs-dismiss="modal" onclick="players(2)">2 Players</button>
+                            <button type="button" class="btn Player3" data-bs-dismiss="modal" onclick="players(3)">3 Players</button>
+                            <button type="button" class="btn Player4" data-bs-dismiss="modal" onclick="players(4)">4 Players</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img class="titulo" src="imagens/jogoDaMemoria/titulo.png" alt="">
+        <hr>
+
+        <div id="turno"></div>
+        <div class="players">
+            <p id="p1" class="p1">P1 = 0</p>
+            <p id="p2" class="p2">P2 = 0</p>
+            <p id="p3" class="p3">P3 = 0</p>
+            <p id="p4" class="p4">P4 = 0</p>
+        </div>
+
+        <div class="jogo">
+
+            <div class="cardGame" onclick="verifica(1)">
+                <input type="checkbox" class="switch" id="switch1" checked="true">
+                <label class="flip-container" for="switch1">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente1" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(2)">
+                <input type="checkbox" class="switch" id="switch2" checked="true">
+                <label class="flip-container" for="switch2">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente2" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(3)">
+                <input type="checkbox" class="switch" id="switch3" checked="true">
+                <label class="flip-container" for="switch3">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente3" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(4)">
+                <input type="checkbox" class="switch" id="switch4" checked="true">
+                <label class="flip-container" for="switch4">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente4" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(5)">
+                <input type="checkbox" class="switch" id="switch5" checked="true">
+                <label class="flip-container" for="switch5">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente5" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(6)">
+                <input type="checkbox" class="switch" id="switch6" checked="true">
+                <label class="flip-container" for="switch6">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente6" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(7)">
+                <input type="checkbox" class="switch" id="switch7" checked="true">
+                <label class="flip-container" for="switch7">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente7" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(8)">
+                <input type="checkbox" class="switch" id="switch8" checked="true">
+                <label class="flip-container" for="switch8">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente8" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(9)">
+                <input type="checkbox" class="switch" id="switch9" checked="true">
+                <label class="flip-container" for="switch9">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente9" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(10)">
+                <input type="checkbox" class="switch" id="switch10" checked="true">
+                <label class="flip-container" for="switch10">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente10" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(11)">
+                <input type="checkbox" class="switch" id="switch11" checked="true">
+                <label class="flip-container" for="switch11">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente11" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(12)">
+                <input type="checkbox" class="switch" id="switch12" checked="true">
+                <label class="flip-container" for="switch12">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente12" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(13)">
+                <input type="checkbox" class="switch" id="switch13" checked="true">
+                <label class="flip-container" for="switch13">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente13" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(14)">
+                <input type="checkbox" class="switch" id="switch14" checked="true">
+                <label class="flip-container" for="switch14">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente14" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(15)">
+                <input type="checkbox" class="switch" id="switch15" checked="true">
+                <label class="flip-container" for="switch15">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente15" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(16)">
+                <input type="checkbox" class="switch" id="switch16" checked="true">
+                <label class="flip-container" for="switch16">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente16" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(17)">
+                <input type="checkbox" class="switch" id="switch17" checked="true">
+                <label class="flip-container" for="switch17">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente17" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(18)">
+                <input type="checkbox" class="switch" id="switch18" checked="true">
+                <label class="flip-container" for="switch18">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente18" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(19)">
+                <input type="checkbox" class="switch" id="switch19" checked="true">
+                <label class="flip-container" for="switch19">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente19" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(20)">
+                <input type="checkbox" class="switch" id="switch20" checked="true">
+                <label class="flip-container" for="switch20">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente20" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(21)">
+                <input type="checkbox" class="switch" id="switch21" checked="true">
+                <label class="flip-container" for="switch21">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente21" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(22)">
+                <input type="checkbox" class="switch" id="switch22" checked="true">
+                <label class="flip-container" for="switch22">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente22" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(23)">
+                <input type="checkbox" class="switch" id="switch23" checked="true">
+                <label class="flip-container" for="switch23">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente23" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cardGame" onclick="verifica(24)">
+                <input type="checkbox" class="switch" id="switch24" checked="true">
+                <label class="flip-container" for="switch24">
+                    <div class="flipper">
+                        <div class="front">
+                            <img id="frente24" class="cartaoMemoria" src="#" />
+                        </div>
+                        <div class="back">
+                            <img class="cartaoMemoria" src="imagens/jogoDaMemoria/cardTraz.png" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- Páginas do Site -->
+                <div class="col-md-4 col-6 links">
+                    <div><a href="login.html">Login</a></div>
+                    <div><a href="erro.html">Contato</a></div>
+                    <div><a href="erro.html">Sobre Nós</a></div>
+                </div>
+
+                <div class="col-md-4 col-6 links">
+                    <div>Arcade Games - 2023©</div>
+                    <div class="icones">
+                        <!-- Intagram -->
+                        <a href="https://www.instagram.com/?hl=pt-br">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Twitter - X -->
+                        <a href="https://twitter.com/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                            </svg>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Logo do Site -->
+                <div class="col-md-4 col-12">
+                    <img src="imagens/logoVetorial.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script/jogoDaMemoria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

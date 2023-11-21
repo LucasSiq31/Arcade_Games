@@ -1,0 +1,195 @@
+@font-face {
+    font-family: Karmatic Arcade;
+    src: url(../fontes/KarmaticArcade.ttf);
+}
+
+@font-face {
+    font-family: Arcade Classic;
+    src: url(../fontes/ArcadeClassic.ttf);
+}
+
+@font-face {
+    font-family: Minecraft;
+    src: url(../fontes/Minecraft.ttf);
+}
+
+@font-face {
+    font-family: Nintendo Ds;
+    src: url(../fontes/NintendoDs.ttf);
+}
+
+.banner{
+    margin-top: 50px;
+    width: 100%;
+}
+header{
+    padding: 15px;
+}
+.logotipo{
+    width: 400px;
+}
+body{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+header, footer{
+    background-color: blue;
+}
+
+.icone{
+    color: white;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header, main, footer, div{
+    border: 1px solid white;
+} */
+h1{
+    font-family: Arcade Classic;
+    text-align: center;
+}
+
+.jogos{
+    display: flex;
+    align-items: center;
+}
+.caixaDeJogos{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    overflow-x: scroll;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+/* Configurando barra de rolamento */
+html ::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: rgb(97, 97, 97);
+}
+html ::-webkit-scrollbar-track {
+    background: rgb(70, 70, 70);
+    border-radius: 50px;
+}
+
+.cartao{
+    border-radius: 20px;
+    margin: 10px;
+    width: 400px;
+    height: 250px;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Karmatic Arcade;
+    border: 5px solid red;
+    transition: 0.3s;
+    position: relative
+}
+.cartao:hover{
+    border: 5px solid gold;
+    transition: 0.3s;
+    scale: 1.05;
+}
+.cartao p{
+    padding: 30px;
+    transition: 0.3s;
+}
+.cartao p:hover{
+    color: red;
+    background-color: yellow;
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+/* Fundo dos Jogos */
+.jogo1{
+    background: url("../imagens/JogoDaVelha.png");
+    background-size: 100%;
+}
+
+.jogo2{
+    background: url("../imagens/JogoDaForca.png");
+    background-size: 100%;
+}
+
+.jogo3{
+    background: url("../imagens/TrocaPalavra.png");
+    background-size: 100%;
+}
+
+.jogo4{
+    background: url("../imagens/pedraPapelTesoura.png");
+    background-size: 100%;
+}
+
+.jogo5{
+    background: url("../imagens/Personagem.png");
+    background-size: 100%;
+}
+
+.jogo6{
+    background: url("../imagens/jogoDaMemoria.png");
+    background-size: 100%;
+}
+
+footer{
+    padding: 25px;
+}
+.links a, .links div{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+footer img{
+    width: 300px;
+}
+.icones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+/* Media Query */
+@media screen and (max-width: 1000px){
+    footer img{
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 800px){
+    .logotipo{
+        width: 300px;
+    }
+    .links a, .links div{
+        font-size: 20px;
+    }
+    footer img{
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+    .cartao{
+        width: 300px;
+        height: 187px;
+    }
+}
+@media screen and (max-width: 500px){
+    .logotipo{
+        width: 200px;
+    }
+    .icone{
+        width: 30px;
+        height: 30px;
+    }
+}

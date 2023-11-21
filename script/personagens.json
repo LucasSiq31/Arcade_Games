@@ -1,0 +1,123 @@
+{
+    "personagens":[
+        {
+            "nome":"Mario",
+            "criacao":"1981",
+            "jogo":"Super Mario Bros",
+            "descricao":"È um personagem fictício da franquia e série de jogos eletrônicos Mario da Nintendo, criado pelo desenvolvedor e designer de jogos eletrônicos japonês Shigeru Miyamoto. Servindo como mascote da Nintendo, Mario já apareceu em mais de 200 jogos desde sua criação. Estreou como “Jumpmam” no jogo de arcade Donkey Kong",
+            "foto":"./imagens/personagens/Mario.png",
+            "fundo":"./imagens/personagens/fundos/mario.jpg",
+            "id": 1
+        },
+
+        {
+            "nome":"Luigi",
+            "criacao":"1983",
+            "jogo":"Super Mario Bros",
+            "descricao":"Criado pelo designer de games Shigeru Miyamoto, Luigi é irmão de Mario, sendo sua dupla em diversos jogos. Luigi teve sua primeira aparição em 1983 no jogo “Mario Bros.”, como o personagem sendo controlado pelo segundo jogador, mantendo essa funcionalidade em “Super Mario Bros.”",
+            "foto":"./imagens/personagens/luigi.png",
+            "fundo":"./imagens/personagens/fundos/mario.jpg",
+            "id": 2
+        },
+
+        {
+            "nome":"Princesa Peach",
+            "criacao":"2006",
+            "jogo":"Super Princess Peach",
+            "descricao":"A Princesa Peach Cogumelo é uma personagem fictícia da série de videogames Super Mario Bros., produzido pela Nintendo. Ela é a princesa do também fictício Reino dos Cogumelos e por diversas vezes faz o papel de donzela em apuros da série, sendo constantemente salva por Mario, por quem ela é apaixonada.",
+            "foto":"./imagens/personagens/peach.png",
+            "fundo":"./imagens/personagens/fundos/mario.jpg",
+            "id": 3
+        },
+
+        {
+            "nome":"Pac Man",
+            "criacao":"1980",
+            "jogo":"Pac Man",
+            "descricao":"Pac-Man tem o objetivo de comer todas as bolas (ou pastilhas) que se encontram espalhadas num labirinto, enquanto evitam quatro fantasmas (os Galaxians), 'blinky', 'pinky', 'inky' e 'clyde', que escapam de uma prisão. Em cada canto da área de jogo, estão pastilhas maiores que permitem ao pac-man caçar os fantasmas, em vez de ser caçado, durante um curto período de tempo.",
+            "foto":"./imagens/personagens/Pacman.png",
+            "fundo":"./imagens/personagens/fundos/pacman.jpeg",
+            "id": 4
+        },
+
+        {
+            "nome":"Blinky - Fantasma Vermelho",
+            "criacao":"1980",
+            "jogo":"Pac Man",
+            "descricao":"No jogo de arcade original, segue atrás de Pac-Man. Ele é considerado o líder dos fantasmas. No desenho animado do Pac-Man, Blinky é esperto e covarde com problemas gramaticais.",
+            "foto":"./imagens/personagens/fantasmaVermelho.png",
+            "fundo":"./imagens/personagens/fundos/pacman.jpeg",
+            "id": 5
+        },
+
+        {
+            "nome":"Pinky - Fantasma rosa",
+            "criacao":"1980",
+            "jogo":"Pac Man",
+            "descricao":"No jogo arcade original, se posiciona na frente de Pac-Man.",
+            "foto":"./imagens/personagens/fantasmaRosa.png",
+            "fundo":"./imagens/personagens/fundos/pacman.jpeg",
+            "id": 6
+        },
+
+        {
+            "nome":"Inky - Fantasma Azul",
+            "criacao":"1980",
+            "jogo":"Pac Man",
+            "descricao":"No jogo de arcade original, tem um humor inconstante. Ele pode ser imprevisível. Às vezes, ele persegue Pac-Man agressivamente como Blinky; outras vezes, ele salta à frente de Pac-Man como Pinky faria. Ele pode até andar como Clyde de vez em quando.",
+            "foto":"./imagens/personagens/fantasmaAzul.png",
+            "fundo":"./imagens/personagens/fundos/pacman.jpeg",
+            "id": 7
+        },
+
+        {
+            "nome":"Clyde - Fantasma laranja",
+            "criacao":"1980",
+            "jogo":"Pac Man",
+            "descricao":"No jogo de arcade original, age como estúpido. Ele vai perseguir o Pac-Man à maneira de Blinky, mas irá para o canto da sua casa quando chegar muito perto.",
+            "foto":"./imagens/personagens/fantasmaLaranja.png",
+            "fundo":"./imagens/personagens/fundos/pacman.jpeg",
+            "id": 8
+        },
+
+        {
+            "nome":"Donkey Kong",
+            "criacao":"1981",
+            "jogo":"Donkey Kong",
+            "descricao":"é um jogo de arcade desenvolvido pela Nintendo, lançado em 1981. É um primeiro exemplo do gênero plataforma, uma vez que a jogabilidade foca na movimentação do personagem principal por uma série de plataformas enquanto desvia de obstáculos.",
+            "foto":"./imagens/personagens/donkeyKong.png",
+            "fundo":"./imagens/personagens/fundos/donkeyKong.png",
+            "id": 9
+        },
+
+        {
+            "nome":"Flapy Bird",
+            "criacao":"2013",
+            "jogo":"Flappy Bird",
+            "descricao":"O objetivo no jogo é ganhar o maior número possível de pontos, controlando um pássaro (tocando na tela) sem deixá-lo colidir nos canos. Se o pássaro tocar em algum obstáculo - ou se deixar o pássaro cair -, o jogo termina. Sempre que o personagem passa por um conjunto de canos, o jogador ganha um ponto.",
+            "foto":"./imagens/personagens/flapyBird.png",
+            "fundo":"./imagens/personagens/fundos/flappybird.png",
+            "id": 10
+        },
+
+        {
+            "nome":"Sonic",
+            "criacao":"1991",
+            "jogo":"Sonic the Hedgehog",
+            "descricao":"Sonic é notório por ser extremamente rápido, aventureiro, corajoso e extrovertido. Luta sempre pela justiça, liberdade, compaixão e pelos indefesos. Enfrenta todos os perigos para ajudar os outros, encarando tudo como um desafio. Mas gosta também de relaxar e descansar, mostrando-se também preguiçoso. Sonic também é conhecido por ser bastante calmo e perpicaz em certas situações que exigem seriedade.",
+            "foto":"./imagens/personagens/sonic.png",
+            "fundo":"./imagens/personagens/fundos/sonic.jpg",
+            "id": 11
+        },
+
+        {
+            "nome":"Tails",
+            "criacao":"1992",
+            "jogo":"Sonic the Hedgehog 2",
+            "descricao":"Inicialmente, ele era uma raposinha tímida e medrosa, mas após conhecer Sonic, isso mudou nele e ele se tornou mais feliz, sorridente e comunicativo. Com o passar do tempo, ele acabou aprendendo a confiar em si mesmo e se tornou mais independente de Sonic e bastante corajoso. Tails é uma raposa gentil, dócil, leal, otimista e as vezes pode ser bastante egoísta.",
+            "foto":"./imagens/personagens/tails.png",
+            "fundo":"./imagens/personagens/fundos/sonic.jpg",
+            "id": 12
+        }
+    ]
+}

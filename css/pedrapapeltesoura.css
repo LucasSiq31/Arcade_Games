@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+main{
+    font-size: x-large;
+}
+h1{
+    font-size: 60px;
+    margin-top: 30px;
+    color: yellow;
+}
+#jogar{
+    background-image: url("../imagens/pedraPapelTesoura/botao.png");
+    width: 500px;
+    height: 150px;
+    font-family: Arcade Classic;
+    color: white;
+    font-size: 50px;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 20px;
+    transition: 0.3s;
+}
+#jogar:hover{
+    scale: 1.05;
+    transition: 0.3s;
+}
+.texto{
+    font-family: Minecraft;
+    text-align: center;
+    text-decoration: underline;
+    color: gold;
+}
+#tempo{
+    color: gold;
+    font-family: Arcade Classic;
+    font-size: 200px;
+    line-height: 150px;
+}
+.botoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: Minecraft;
+}
+.botoes button{
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    margin: 10px;
+}
+.botoes button:hover{
+    scale: 1.1;
+    transition: 0.3s;
+}
+.infos{
+    font-family: Minecraft;
+    text-align: center;
+}
+.pulaLinha{
+    margin: 0 auto;
+    display: block;
+    padding: 30px;
+    width: 500px;
+}
+.background{
+    width: 100%;
+}
+.fundo{
+    width: 100%;
+}

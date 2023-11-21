@@ -1,0 +1,158 @@
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo{
+  text-align: center;
+  margin-top: 20px;
+}
+#turno{
+  font-size: 50px;
+  font-family: Arcade Classic;
+}
+.modal-content{
+  border-radius: 20px;
+}
+.modal p{
+  color: black;
+  text-align: center;
+  font-size: x-large;
+}
+.modal h1{
+  color: coral;
+  text-align: center;
+  margin: 0 auto;
+}
+.btnModal{
+  display: flex;
+  justify-content: space-between
+
+
+}
+.btnModal button{
+    padding: 10px;
+    color: white;
+    width: 100px;
+    border-radius: 15px;
+}
+.Player1{
+  background-color: dodgerblue;
+}
+.Player1:hover{
+  border: 1px solid dodgerblue;
+  background-color: white;
+  color: dodgerblue;
+}
+.Player2{
+  background-color: coral;
+}
+.Player2:hover{
+  border: 1px solid coral;
+  background-color: white;
+  color: coral;
+}
+.Player3{
+  background-color: rgb(230, 196, 4);
+}
+.Player3:hover{
+  border: 1px solid rgb(230, 196, 4);
+  background-color: white;
+  color: rgb(230, 196, 4);
+}
+.Player4{
+  background-color: rgb(1, 180, 46);
+}
+.Player4:hover{
+  border: 1px solid rgb(1, 180, 46);
+  background-color: white;
+  color: rgb(1, 180, 46);
+}
+.p1, .p2, .p3, .p4{
+  font-family: Arcade Classic;
+  font-size: 30px;
+  width: 120px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  display: none;
+}
+
+.players{
+  display: flex;
+}
+.p1{
+  background-color: dodgerblue;
+  color: white;
+  border: 2px solid dodgerblue;
+}
+.p2{
+  color: coral;
+  border: 2px solid coral;
+}
+.p3{
+  color: rgb(230, 196, 4);
+  border: 2px solid rgb(230, 196, 4);
+}
+.p4{
+  color: rgb(1, 180, 46);
+  border: 2px solid rgb(1, 180, 46);
+}
+
+.jogo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1360px;
+}
+.cartaoMemoria{
+    width: 150px;
+    height: 240px;
+    border: 5px solid white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.cartaoMemoria:hover{
+    scale: 1.03;
+    transition: 0.3s;
+}
+.flip-container {
+    display: inline-block;
+    width: 150px;
+    height: 240px;
+    perspective: 1000px; 
+}
+  
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+  
+.switch{
+    display: none;
+}
+  
+.switch:checked ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+}
+  
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cardGame{
+    margin: 10px;
+}
+  
+.back {
+    transform: rotateY(180deg);
+}
+footer{
+    margin-top: 100px;
+}

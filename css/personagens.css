@@ -1,0 +1,61 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 60px;
+}
+.selecao{
+    display: flex;
+    font-size: 20px;
+    margin: 20px;
+}
+.resultado{
+    background-size: 100%;
+    width: 1000px;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    display: flex;
+    width: 800px;
+}
+.personagem{
+   width: 150px; 
+   height: 150px;
+   background-image: url("../imagens/personagens/elementos/caixa.png");
+   background-size: 150px 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5px;
+   transition: 0.3s;
+}
+
+.personagem:hover{
+    scale: 1.1;
+    transition: 0.3s;
+}
+.foto{
+    width: 100px;
+    background-color: rgb(76, 121, 173);
+}
+
+.grade{
+    margin: 20px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.selecao h1{
+    text-align: left;
+}
+
+#imagem img{
+    width: 400px;
+}
