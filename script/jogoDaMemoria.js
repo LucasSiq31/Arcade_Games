@@ -98,10 +98,6 @@ function memoria() {
     for (i = 0; i < cartas.length; i++) {
         document.getElementById("frente" + (i + 1)).src = cartas[i][1];
     }
-
-    for(i = 0; i < viradas.length; i++){
-         viradas[i] = 0;
-    }
 }
 
 //Função que captura o número de jogadores
