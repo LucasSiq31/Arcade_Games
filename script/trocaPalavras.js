@@ -10,6 +10,6 @@ function troca(){
 function resetar(){
     document.getElementById("palavra1").innerHTML= "Mario"
     document.getElementById("palavra2").innerHTML= "Mario"
-    document.getElementById("palavra3").innerHTML= "Princesa"
+    document.getElementById("palavra3").innerHTML= "castelo"
     document.getElementById("palavra4").innerHTML= "Mario"
 }
