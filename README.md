@@ -1,7 +1,7 @@
 # Arcade_Games
 Trabalho do curso Técnico de Desenvolvimento de Sistemas do SENAI em fazer Site de Jogos
 
---  --  ARCADE GAMES  --  --
+ARCADE GAMES --
 Tematização inspirada em jogos retro dos anos 80 e 90;
 
 -JOGO DA VELHA: 
@@ -24,3 +24,6 @@ Descubra informações sobre alguns personagens da era retro dos videogames;
 -JOGO DA MEMÓRIA:
 Jogo da memória clássico com 24 cartas e 12 personagens diferentes;
 De 1 a 4 jogadores;
+
+
+-LINK: https://bit.ly/arcadeGames
