@@ -5,6 +5,7 @@ body{
 main{
     font-family: Minecraft;
     text-align: center;
+    font-size: x-large;
 }
 
 h1{
@@ -19,6 +20,7 @@ input{
     text-align: center;
     border: 5px solid green;
     margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 button{
     background-image: url("../imagens/TrocaPalavras/botao.png");
