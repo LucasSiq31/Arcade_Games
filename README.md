@@ -20,7 +20,7 @@ Tematização inspirada em jogos retro dos anos 80 e 90.
 
 ##
 
--Acesse a aplicação: https://bit.ly/arcadeGames
+-Acesse à aplicação: https://bit.ly/arcadeGames
 
 ##
 <b>Feito com:</b>
